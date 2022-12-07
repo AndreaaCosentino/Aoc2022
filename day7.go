@@ -54,9 +54,8 @@ func main(){
 			mapDirectories[currentString] = entry
 		}
 	}
-	for k,_ := range mapDirectories{
-		_ = calculateSize(k,mapDirectories)
-	}
+	calculateSize("/",mapDirectories)
+
 
 	
 	enough := 30000000 - (70000000-mapDirectories["/"].size)
