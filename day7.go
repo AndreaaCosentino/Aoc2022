@@ -55,9 +55,17 @@ func main(){
 		}
 	}
 	calculateSize("/",mapDirectories)
+	/*Prima parte*/
+	sum := 0
 
+	for k, _ := range mapDirectories{
+		if mapDirectories[k].size < 100000{
+			sum += mapDirectories[k].size
+		}
+	}
 
-	
+	fmt.Println("the sum is ",sum)
+	/*Seconda parte*/
 	enough := 30000000 - (70000000-mapDirectories["/"].size)
 	min := 70000000
 	for k,_ := range mapDirectories{
