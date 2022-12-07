@@ -29,7 +29,7 @@ func main(){
 			if words[1] == "cd"{
 				if words[2] == ".."{
 					currentPath = currentPath[:len(currentPath)-1]
-				}else if words[2] == "\\"{
+				}else if words[2] == "/" && len(currentPath) != 0{
 					currentPath = currentPath[:1]
 				}else{
 					currentPath = append(currentPath,words[2])
